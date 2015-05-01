@@ -1,2 +1,30 @@
 <h1>A very tiny dictionary</h1>
-<h2>Input some words and definitions!</2>
+<h2>Input some words and definitions!</h2>
+
+<!-- Not sure of method here? -->
+
+
+<form action='/' method='post'>
+  <div class='form-group'>
+    <ul>
+      <li>
+        <label for='word'>Word</label>
+        <input id='word' name='word' type='text'>
+      </li>
+      <li>
+        <label for='definition'>Definition</label>
+        <input id='definition' name='definition' type='text'>
+      </li>
+    </ul>
+  </div>
+</form>
+<button type='submit' class='btn-success'>Add</button>
+
+
+<ul>
+  <% @words.each do |word| %>
+    <li>
+      <a href="dictionary/<%= word.name %>">word.name</a>
+    </li>
+  <% end %>
+</ul>
