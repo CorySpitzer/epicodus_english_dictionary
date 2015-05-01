@@ -1,7 +1,9 @@
 class Definition
-  attr_accessor :content
+  #TODO: Add a word type, like 'verb'
 
-  define_method(:initialize) do |content|
-    @content = content
+  attr_accessor :text
+
+  define_method(:initialize) do |text|
+    @text = text
   end
 end

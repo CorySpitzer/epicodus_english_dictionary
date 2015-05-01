@@ -1,9 +1,15 @@
 class Word
-  attr_accessor :name, :definition
+  # @@definitions = []
+
+  attr_accessor :name, :definition, :definitions
 
   define_method(:initialize) do |name|
     @name = name
-    @definition = nil
+    @definitions = []
+  end
+
+  define_method(:save_definition) do |definition|
+
   end
 
 end
