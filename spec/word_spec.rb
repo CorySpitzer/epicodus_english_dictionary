@@ -3,6 +3,10 @@ require('word')
 # require('definition')
 
 describe('Word') do
+  before() do
+    Word.clear()
+  end
+
   describe('#name') do
     it('set and get the word') do
       word = Word.new(:name => 'A')

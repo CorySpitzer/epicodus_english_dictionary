@@ -18,6 +18,10 @@ class Word
     @@words
   end
 
+  define_singleton_method(:clear) do
+    @@words =[]
+  end
+
   define_method(:add_definition) do |params|
     @definitions.push(params.fetch(:definition))
   end
