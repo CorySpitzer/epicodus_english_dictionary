@@ -1,0 +1,10 @@
+<h1>Dictionary</h1>
+
+<ul>
+  <% @words.each do |word| %>
+    <!-- TODO: another loop for word defs -->
+    <li><%= word.name %>: <%= word.definitions %></li>
+  <% end %>
+</ul>
+
+<a href="/">Home</a>

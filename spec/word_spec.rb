@@ -39,6 +39,16 @@ describe('Word') do
     end
   end
 
+  describe('.clear') do
+    it('clears all words') do
+      bank = Word.new(:name => 'Bank')
+      bank.save()
+      crank = Word.new(:name => 'Crank')
+      crank.save()
+      expect(Word.clear).to(eq([]))
+    end
+  end
+
   describe('#add_definition') do
     it('adds a definition to a word') do
       bank = Word.new(:name => 'Bank')
