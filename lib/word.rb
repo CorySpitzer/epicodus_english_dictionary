@@ -1,4 +1,5 @@
 class Word
+  #TODO: saving definitions and a clear method
   # @@definitions = []
 
   attr_accessor :name, :definition, :definitions
