@@ -11,8 +11,12 @@ end
 post('/') do
   word = params.fetch('word')
   definition = params.fetch('definition')
-  entry = Word.new(word)
-  entry.add_definition(definition)
+  entry = Word.new(:name => word)
+  entry.add_definition(:definition => definition)
   entry.save()
-  erb(:index)
+  erb(:success)
+end
+
+get('/success') do
+  erb(:success)
 end
