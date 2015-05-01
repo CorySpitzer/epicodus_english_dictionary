@@ -3,7 +3,13 @@
 <ul>
   <% @words.each do |word| %>
     <!-- TODO: another loop for word defs -->
-    <li><%= word.name %>: <%= word.definitions %></li>
+    <li><%= word.name %>:
+      <ol>
+        <% word.definitions.each do |definition| %>
+          <li><%= definition %>.</li>
+        <% end %>
+      </ol>
+    </li>
   <% end %>
 </ul>
 
