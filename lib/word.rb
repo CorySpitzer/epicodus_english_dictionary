@@ -5,8 +5,8 @@ class Word
 
   attr_accessor :name, :definitions
 
-  define_method(:initialize) do |name|
-    @name = name
+  define_method(:initialize) do |params|
+    @name = params.fetch(:name)
     @definitions = []
   end
 
@@ -18,8 +18,8 @@ class Word
     @@words
   end
 
-  define_method(:add_definition) do |definition|
-    @definitions.push(definition)
+  define_method(:add_definition) do |params|
+    @definitions.push(params.fetch(:definition))
   end
 
 end

@@ -3,7 +3,7 @@ class Definition
 
   attr_accessor :text
 
-  define_method(:initialize) do |text|
-    @text = text
+  define_method(:initialize) do |params|
+    @text = params.fetch(:text)
   end
 end
