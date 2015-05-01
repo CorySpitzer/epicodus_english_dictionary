@@ -32,4 +32,22 @@ describe('Word') do
     end
   end
 
+  describe('#save and .all') do
+    it('saves a Word instance to the list of all saved words, and
+        returns a list of all saved words') do
+      bank = Word.new('Bank')
+      bank.save()
+      crank = Word.new('Crank')
+      crank.save()
+      expect(Word.all).to(eq([bank, crank]))
+    end
+  end
+
+  # describe('.all') do
+  #   it('') do
+  #     bank = Word.new('Bank')
+  #
+  #   end
+  # end
+
 end
