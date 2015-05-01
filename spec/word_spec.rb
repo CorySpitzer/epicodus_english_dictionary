@@ -11,20 +11,20 @@ describe('Word') do
     end
   end
 
-  describe('#definition') do
-    it('gets and sets the definition of a word') do
-      cat = Word.new('Cat')
-      cat.definition = Definition.new('A feline animal').text()
-      expect(cat.definition).to(eq('A feline animal'))
-    end
-  end
+  # describe('#definition') do
+  #   it('gets and sets the definition of a word') do
+  #     cat = Word.new('Cat')
+  #     cat.definition = Definition.new('A feline animal').text()
+  #     expect(cat.definition).to(eq('A feline animal'))
+  #   end
+  # end
 
   describe('#definitions') do
     it('gets, sets, and pushes into definitions') do
       bank = Word.new('Bank')
-      def1 = Definition.new('A river bank').text()
-      def2 = Definition.new('A place to store money').text()
-      def3 = Definition.new('To store').text()
+      def1 = Definition.new('A river bank')
+      def2 = Definition.new('A place to store money')
+      def3 = Definition.new('To store')
       bank.definitions = [def1, def2]
       bank.definitions.push(def3)
       expect(bank.definitions[0]).to(eq(def1))
@@ -43,11 +43,11 @@ describe('Word') do
     end
   end
 
-  # describe('.all') do
-  #   it('') do
-  #     bank = Word.new('Bank')
-  #
-  #   end
-  # end
-
+  describe('#add_definition') do
+    it('adds a definition to a word') do
+      bank = Word.new('Bank')
+      bank.add_definition('To store')
+      expect(bank.definitions[0]).to(eq('To store'))
+    end
+  end
 end
